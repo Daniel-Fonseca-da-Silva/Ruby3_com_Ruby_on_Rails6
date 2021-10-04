@@ -13,3 +13,16 @@ user.password = 'segredo'
 user.valid? # => true
 user.save => true
 
+reload! carrega arquivos sem precisar sair do console
+
+user = User.new
+user.email = 'niko@example.com'
+user.full_name = 'Nikolai'
+user.location = 'Moscou, Russia'
+user.password = 'segredo'
+user.password_confirmation = 'segreda'
+user.valid? # => false
+user.errors.messages
+# => {:password=>["doesn't match confirmation"]}
+
+
