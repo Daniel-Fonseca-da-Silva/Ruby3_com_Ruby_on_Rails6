@@ -25,4 +25,17 @@ user.valid? # => false
 user.errors.messages
 # => {:password=>["doesn't match confirmation"]}
 
+reload! carrega arquivos sem precisar sair do console
+
+user = User.new
+user.email = 'marie@example.com'
+user.full_name = 'Marie'
+user.location = 'London, UK'
+user.password = 'secret'
+user.password_confirmation = 'secret'
+user.valid? # => false
+user.errors.messages
+# => {:bio=>
+  ["is too short (minimum is 30 characters)",
+   "is too long (maximum is 200 characters)"]}
 
