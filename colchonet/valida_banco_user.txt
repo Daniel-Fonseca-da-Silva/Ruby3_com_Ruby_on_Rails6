@@ -1,0 +1,15 @@
+rails console
+
+user = User.new
+user.valid? # => false
+user.save => false
+
+user = User.new
+user.email = 'joao@example.com'
+user.full_name = 'João'
+user.location = 'São Paulo, Brasil'
+user.password = 'segredo'
+
+user.valid? # => true
+user.save => true
+
