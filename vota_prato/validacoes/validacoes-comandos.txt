@@ -1,0 +1,13 @@
+rails console
+
+r = Restaurante.new nome: "teste",
+endereco: "teste, 1234"
+r.save
+
+r.valid? # verifica se objeto passa nas validações
+r.errors.empty? # retorna true/false indicando se há erros ou não
+r.errors.count # retorna o número de erros
+r.errors[:nome] # retorna apenas o erro do atributo nome
+
+r.errors.each {|field, msg| puts "#{field} - #{msg}"} # Traz diversas informações dos erros
+

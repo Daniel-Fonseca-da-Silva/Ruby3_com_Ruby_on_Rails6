@@ -27,8 +27,7 @@ Restaurante = Restaurante.destroy[1,2,3]
 Deleta todas entidades
 Restaurante.destroy_all
 
-Restaurante.all
-# retorna todos os registros
+Restaurante.all # retorna todos os registros
 Restaurante.first # retorna o primeiro registro
 Restaurante.last # retorna o último registro
 
