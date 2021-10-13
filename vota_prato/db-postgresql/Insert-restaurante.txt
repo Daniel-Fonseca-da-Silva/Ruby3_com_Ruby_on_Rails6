@@ -1,0 +1,8 @@
+rails console
+
+r = Restaurante.new
+r.nome = "Fogao maluco"
+r.endereco = "Av. dos chefes, 117"
+r.especialidade = "Comida Peruana"
+r.save
+
