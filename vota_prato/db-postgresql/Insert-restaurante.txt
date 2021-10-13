@@ -3,6 +3,32 @@ rails console
 r = Restaurante.new
 r.nome = "Fogao maluco"
 r.endereco = "Av. dos chefes, 117"
+r.especialidade = "Comida Brasileira"
+r.save
+
+Alterada nome da entidade com
+Restaurante.update(1, {nome: "Fogão Peruano"})
+
+Alterados diversos campos com
+Restaurante.update_all("especialidade = 'massas', nome = 'Fogão italiano' ")
+
+r = Restaurante.new
+r.nome = "Fogao peruano"
+r.endereco = "Av. Lima, 118"
 r.especialidade = "Comida Peruana"
 r.save
+
+Deleta entidade
+Restaurante = Restaurante.destroy(1)
+
+Deleta várias entidades seguidas
+Restaurante = Restaurante.destroy[1,2,3]
+
+Deleta todas entidades
+Restaurante.destroy_all
+
+Restaurante.all
+# retorna todos os registros
+Restaurante.first # retorna o primeiro registro
+Restaurante.last # retorna o último registro
 
